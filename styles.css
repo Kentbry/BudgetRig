@@ -286,7 +286,8 @@ body.page { padding: 20px; }
     border-radius: 8px;
 }
 
-.specs { max-width: 500px; margin: 0 auto; text-align: left; }
+.story { text-align: left; }
+.story p { font-size: 15px; line-height: 1.7; }
 
 /* CONTACT */
 .contact-page {
