@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetRig | Contact</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="page">
+
+    <div class="contact-page">
+
+        <header class="banner">
+            <h1>Contact</h1>
+            <p>Questions about a part or a budget build? Send a message or visit the store.</p>
+        </header>
+
+        <div class="contact-grid">
+
+            <section class="box">
+                <h2>Details</h2>
+                <ul class="contact-list">
+                    <li><span>Phone</span>+63 XXX XXX XXXX</li>
+                    <li><span>Email</span>dawg@email.com</li>
+                    <li><span>Store</span>Lenin Computer Systems, Inc.</li>
+                </ul>
+            </section>
+
+            <section class="box">
+                <h2>Send a message</h2>
+                <form class="contact-form" id="contact-form">
+                    <input type="text" placeholder="Your name" required>
+                    <input type="email" placeholder="Your email" required>
+                    <textarea rows="4" placeholder="Your message" required></textarea>
+                    <button class="btn" type="submit">Send message</button>
+                </form>
+            </section>
+
+        </div>
+
+        <section class="box">
+            <h2>Find the store</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://maps.google.com/maps?q=Lenin%20Computer%20Systems%20Inc%20Zamboanga%20City&z=15&output=embed"
+                    title="Computer store location"
+                    loading="lazy"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", e => {
+            e.preventDefault();
+            e.target.innerHTML = "<p>Thanks! Your message was sent.</p>";
+        });
+    </script>
+
+</body>
+</html>

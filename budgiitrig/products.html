@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetRig | Products</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="page">
+
+    <header class="banner">
+        <h1>Our PC Products</h1>
+        <p>Find the best gadgets and PC accessories for your setup.</p>
+    </header>
+
+    <input type="text" id="search" placeholder="Search products...">
+
+    <div class="product-container">
+
+        <div class="product-card">
+            <img src="images/aulaf75.png" alt="AULA F75 Keyboard">
+            <span class="tag">Keyboard</span>
+            <h2>AULA F75 Mechanical Keyboard</h2>
+            <p>A compact mechanical keyboard with customizable RGB lighting for gaming and typing.</p>
+            <h3>₱2,750</h3>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/corei7.png" alt="Intel Core i7 Processor">
+            <span class="tag">Processor</span>
+            <h2>Intel Core i7-10700</h2>
+            <p>A 10th-generation desktop processor for multitasking, productivity, and gaming.</p>
+            <h3>₱8,000</h3>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/dell.png" alt="Dell Monitor">
+            <span class="tag">Monitor</span>
+            <h2>Dell Monitor</h2>
+            <p>A computer display for work, studying, entertainment, and gaming.</p>
+            <h3>₱8,500</h3>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/logitech-mx-master.png" alt="Logitech MX Master Mouse">
+            <span class="tag">Mouse</span>
+            <h2>Logitech MX Master 3S</h2>
+            <p>A wireless mouse with precise tracking and a comfortable ergonomic design.</p>
+            <h3>₱5,500</h3>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/razer.png" alt="Razer Gaming Headset">
+            <span class="tag">Headset</span>
+            <h2>Razer Gaming Headset</h2>
+            <p>A gaming headset designed for immersive audio and comfortable gameplay.</p>
+            <h3>₱4,000</h3>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/rtx.png" alt="RTX Graphics Card">
+            <span class="tag">Graphics Card</span>
+            <h2>ASUS ROG RTX 5090</h2>
+            <p>A high-performance graphics card built for demanding games and creative workloads.</p>
+            <h3>₱214,995</h3>
+            <button class="btn">Buy Now</button>
+        </div>
+
+    </div>
+
+    <p class="product-note">Note: Prices are estimates for this school project and may vary by store.</p>
+
+    <script>
+        document.getElementById("search").addEventListener("input", e => {
+            const text = e.target.value.toLowerCase();
+            document.querySelectorAll(".product-card").forEach(card => {
+                card.style.display = card.textContent.toLowerCase().includes(text) ? "" : "none";
+            });
+        });
+    </script>
+
+</body>
+</html>

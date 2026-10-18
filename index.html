@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetRig</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="site">
+
+    <header class="header">
+        <p>BUDGETRIG</p>
+    </header>
+
+    <nav id="nav">
+        <a href="budgiitrig/home.html" target="main" class="active">Home</a>
+        <a href="budgiitrig/products.html" target="main">Products</a>
+        <a href="budgiitrig/about.html" target="main">About</a>
+        <a href="budgiitrig/contact.html" target="main">Contact</a>
+    </nav>
+
+    <main class="main">
+        <iframe src="budgiitrig/home.html" name="main" title="BudgetRig content"></iframe>
+    </main>
+
+    <footer class="footer">
+        <p>All rights reserved &copy; 2026 BudgetRig.</p>
+    </footer>
+
+    <script>
+        const frame = document.querySelector("iframe");
+        const links = document.querySelectorAll("#nav a");
+    
+        frame.addEventListener("load", () => {
+            const page = frame.contentWindow.location.pathname.split("/").pop();
+
+            links.forEach(link => {
+                link.classList.toggle("active", link.getAttribute("href").endsWith(page));
+            });
+        });
+    </script>
+
+</body>
+</html>
