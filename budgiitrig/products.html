@@ -22,7 +22,7 @@
             <span class="tag">Keyboard</span>
             <h2>AULA F75 Mechanical Keyboard</h2>
             <p>A compact mechanical keyboard with customizable RGB lighting for gaming and typing.</p>
-            <h3>₱2,750</h3>
+            <h3>₱2,399</h3>
             <button class="btn">Buy Now</button>
         </div>
 
@@ -31,7 +31,7 @@
             <span class="tag">Processor</span>
             <h2>Intel Core i7-10700</h2>
             <p>A 10th-generation desktop processor for multitasking, productivity, and gaming.</p>
-            <h3>₱8,000</h3>
+            <h3>₱6,599</h3>
             <button class="btn">Buy Now</button>
         </div>
 
@@ -40,7 +40,7 @@
             <span class="tag">Monitor</span>
             <h2>Dell Monitor</h2>
             <p>A computer display for work, studying, entertainment, and gaming.</p>
-            <h3>₱8,500</h3>
+            <h3>₱7,999</h3>
             <button class="btn">Buy Now</button>
         </div>
 
@@ -49,7 +49,7 @@
             <span class="tag">Mouse</span>
             <h2>Logitech MX Master 3S</h2>
             <p>A wireless mouse with precise tracking and a comfortable ergonomic design.</p>
-            <h3>₱5,500</h3>
+            <h3>₱4,699</h3>
             <button class="btn">Buy Now</button>
         </div>
 
@@ -58,7 +58,7 @@
             <span class="tag">Headset</span>
             <h2>Razer Gaming Headset</h2>
             <p>A gaming headset designed for immersive audio and comfortable gameplay.</p>
-            <h3>₱4,000</h3>
+            <h3>₱3,499</h3>
             <button class="btn">Buy Now</button>
         </div>
 
@@ -75,11 +75,12 @@
 
     <p class="product-note">Note: Prices are estimates for this school project and may vary by store.</p>
 
-    <script>
+     <script>
         document.getElementById("search").addEventListener("input", e => {
             const text = e.target.value.toLowerCase();
             document.querySelectorAll(".product-card").forEach(card => {
-                card.style.display = card.textContent.toLowerCase().includes(text) ? "" : "none";
+                const name = card.querySelector("h2").textContent.toLowerCase();
+                card.style.display = name.includes(text) ? "" : "none";
             });
         });
     </script>
