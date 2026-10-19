@@ -150,6 +150,7 @@ body.page { padding: 20px; }
     background: var(--cyan-soft);
     transform: scale(1.20);
 }
+.product-card .btn:hover { transform: scale(1.05); }
 
 /* HOME */
 .hero {
